@@ -1,0 +1,86 @@
+/* fonts */
+@mixin inter-regular {
+	font-family: 'Inter', sans-serif;
+	font-weight: normal;
+}
+
+@mixin inter-medium {
+	font-family: 'Inter', sans-serif;
+	font-weight: 500;
+}
+
+@mixin inter-bold {
+	font-family: 'Inter', sans-serif;
+	font-weight: bold;
+}
+
+@mixin poppins-regular {
+	font-family: 'Poppins', sans-serif;
+	font-weight: normal;
+}
+
+@mixin poppins-medium {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+}
+
+@mixin poppins-semibold {
+	font-family: 'Poppins', sans-serif;
+	font-weight: 600;
+}
+
+@mixin poppins-bold {
+	font-family: 'Poppins', sans-serif;
+	font-weight: bold;
+}
+
+/* font properties */
+@mixin font-props($size: false, $lh: false, $color: false) {
+	@if $size {
+		font-size: $size;
+	}
+	@if $lh {
+		line-height: $lh;
+	}
+	@if $color {
+		color: $color;
+	}
+}
+
+/* flex */
+@mixin flex($justify: space-between, $align: center, $direction: false, $wrap: false) {
+	display: flex;
+	justify-content: $justify;
+	align-items: $align;
+	@if $direction {
+		flex-direction: $direction;
+	}
+	@if $wrap{
+		flex-wrap: $wrap;
+	}
+}
+
+@mixin grid($columns, $colgap, $rowgap, $rows: false) {
+	display: grid;
+	grid-template-columns: $columns;
+	grid-gap: $colgap $rowgap;
+	@if $rows {
+		grid-template-rows: $rows;
+	}
+}
+
+/* background */
+@mixin background($image: false, $repeat: no-repeat, $position: center, $size: cover) {
+	@if $image {
+		background-image: url($image);
+	}
+	background-repeat: $repeat; 
+	background-position: $position;
+	background-size: $size;
+}
+
+/* pseudo */
+@mixin pseudo($display: inline-block, $content: '') {
+	content: $content;
+	display: $display;
+}

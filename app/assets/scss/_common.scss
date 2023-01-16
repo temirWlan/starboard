@@ -1,0 +1,345 @@
+@import '_mixins.scss';
+@import '_variables.scss';
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.bg {
+    &--yellow {
+        background-color: $yellow;
+    }
+    &--blue {
+        background-color: $blueFirst;
+    }
+}
+
+.circle {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    &--gray {
+        background: rgba(255, 255, 255, 0.6);
+    }
+}
+
+.circles {
+    @include flex;
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    &::before, &::after {
+        @include pseudo;
+        min-width: 9px;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.6);
+    }
+    &::before {
+        transform: translateX(15px);
+    }
+    &::after {
+        transform: translateX(21px);
+    }
+}
+
+.text {
+    &--black {
+        color: $blackFirst;
+    }
+    &--white {
+        color: #fff;
+    }
+    &--blue {
+        color: $blueSecond;
+    }
+    &--light-gray {
+        color: rgba(54, 54, 54, 0.6);
+    }
+    &--gray {
+        color: rgba(54, 54, 54, 0.7);
+    }
+    &--uppercase {
+        text-transform: uppercase;
+    }
+}
+
+.title {
+    letter-spacing: 1px;
+    &--first {
+        @include poppins-semibold;
+        @include font-props(34px, 150%, $blackSecond);
+    }
+    &--second {
+        @include poppins-semibold;
+        @include font-props(34px, 150%, $blackSecond);
+    }
+    &--third {
+        @include poppins-bold;
+        @include font-props(34px, 150%, $blackSecond);
+    }
+}
+
+.subtitle {
+    &--first {
+        @include poppins-regular;
+        @include font-props(18px, 150%, $blackSecond);
+    }
+    &--second {
+        @include poppins-medium;
+        @include font-props(16px, 150%, $blackSecond);
+    }
+    &--third {
+        @include poppins-regular;
+        @include font-props(14px, 150%, $blackSecond);
+    }
+}
+
+.caption {
+    &--first {
+        @include poppins-regular;
+        @include font-props(16px, 150%, $blackSecond);
+    }
+}
+
+.input {
+    padding: 20px 25px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.btn {
+    padding: 14px 32px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    text-decoration: none;
+    text-align: center;
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease 0s;
+    @include poppins-medium;
+    @include font-props(16px, 150%, #fff);
+    &-link {
+        display: inline-block;
+    }
+    &--blue {
+        background-color: $blueFirst;
+        color: #fff;
+        &:hover {
+            background-color: $blueSecond;
+        }
+    }
+    &--yellow {
+        padding: 17px 33px;
+        background-color: $yellow;
+        color: $blackFirst;
+        &:hover {
+            background-color: $darkYellow;
+        }
+    }
+    &--outline {
+        background-color: transparent;
+        &-white {
+            border: 1px solid #fff;
+            color: #fff;
+            &:hover {
+                background-color: #fff;
+                color: $blackFirst;
+            }
+        }
+        &-blue {
+            border: 1px solid $blueSecond;
+            color: $blueSecond;
+            &:hover {
+                background-color: $blueSecond;
+                color: #fff;
+            }
+        }
+    }
+}
+
+.header {
+    @include flex($justify: flex-end);
+    &__logo {
+        margin-right: auto;
+    }
+    &__navbar {
+        margin-right: 9.5%;
+    }
+    &__btn {
+    }
+}
+
+.navbar {
+    &__list {
+        list-style-type: none;
+        @include flex;
+        &-item {
+            position: relative;
+            &:hover {
+                &::after {
+                    transition: all 0.3s ease 0s;
+                    @include pseudo;
+                    width: 100%;
+                    height: 1px;
+                    position: absolute;
+                    left: 0;
+                    bottom: -3px;
+                    background-color: rgba(255, 255, 255, 0.2);
+                }
+            }
+            &:not(:first-child) {
+                margin-left: 55px;
+            }
+            & a {
+                text-decoration: none;
+                transition: all 0.3s ease-in-out;
+                @include poppins-regular;
+                @include font-props(16px, 150%, rgba(255, 255, 255, 0.8));
+                &:hover {
+                    color: rgba(255, 255, 255, 1);
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    @include font-props(16px, 150%, rgba(255, 255, 255, 0.6));
+    background-color: #2b2a2a;
+    & a {
+        color: rgba(255, 255, 255, 0.6);
+        text-decoration: none;
+    }
+    &__top {
+        padding: 86px 0 99px;
+        &-content {
+            @include flex($align: flex-start);
+            & > div {
+                display: flex;
+                flex-direction: column;
+                &:first-child {
+                    flex: 0 0 312px;
+                }
+            }
+        }
+    }
+    &__bottom {
+        padding: 33px 0;
+        background-color: #201e1e;
+        &-content {
+            @include flex;
+            & > div {
+                @include flex;
+                & > a {
+                    transition: all 0.3s ease 0s;
+                    &:hover {
+                        color:rgba(255, 255, 255, 1);
+                    }
+                    &:last-child {
+                        margin-left: 117px;
+                    }
+                }
+            }
+        }
+    }
+    &__title {
+        @include font-props(31px, 148%, #fff);
+    }
+    &__subtitle {
+        margin-top: 15px;
+        @include font-props(16px, 187.5%, rgba(255, 255, 255, 0.6));
+    }
+    &__contacts {
+        display: flex;
+        flex-direction: column;
+        margin-top: 120px;
+        & a {
+            color: #fff;
+            &:not(:first-child) {
+                margin-top: 9px;
+            }
+            img {
+                margin-right: 10px;
+                width: 24px;
+                height: 24px;
+            }
+        }
+    }
+    &__navbar {
+        display: flex;
+        &-column {
+            display: flex;
+            flex-direction: column;
+            &:not(:first-child) {
+                margin-left: 80px;
+            }
+        }
+        &-list {
+            margin-top: 27px;
+            list-style-type: none;
+            &-item {
+                a {
+                    font-size: 14px;
+                    transition: all 0.3s ease 0s;
+                    &:hover {
+                        color: rgba(255, 255, 255, 1);
+                    }
+                }
+                &:not(:first-child) {
+                    margin-top: 21px;
+                }
+            }
+        }
+    }
+}
+
+.demo-form-block {
+    @include flex($justify: center);
+    @include background($image: '../img/demo-form-block-gradient.png');
+    padding: 97px 0 107px;
+    background-color: $blackSecond;
+    border-radius: 20px;
+    text-align: center;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 665px;
+    }
+    &__title {
+        @include poppins-medium;
+        @include font-props(30px, 150%, #fff);
+    }
+    &__subtitle {
+        @include font-props(16px, 150%, rgba(255, 255, 255, 0.6));
+        margin-top: 15px;
+    }
+    &__form {
+        margin-top: 35px;
+        width: 565px;
+    }
+    &__btn {
+        margin-left: 21px;
+        padding: 14px 32px;
+    }
+    &__desc {
+        @include font-props(14px, 150%, rgba(255, 255, 255, 0.6));
+        margin-top: 16px;
+    }
+}
+
+.demo-form {
+    @include flex($justify: flex-start);
+    &__input {
+        flex: 1 0 auto;
+    }
+}
+
