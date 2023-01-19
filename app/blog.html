@@ -1,12 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Starboard</title>
-</head>
+<html lang="en-EN ru-RU">
+@@include('./head.html')
 <body>
-    
+    <div class="wrapper page blog-page">
+        <div class="container">
+            @@include('./header.html', { logoColor: 'blue', btnColor: 'blue' })
+            <main class="blog-main">
+                <div class="blog-main__body">
+                    <div class="blog-main__box">
+                        <h2 class="blog-main__title title--first">
+                            We asked ourselves: What is the Future of <br />
+                            Corporate Services & Entity Management?
+                        </h2>
+                        <form class="blog-main__search-form" action="#">
+                            <input class="blog-main__search-form-input input input--outlined input--outlined-gray" type="text" placeholder="Type here…">
+                            <button class="blog-main__search-form-btn btn btn--blue" type="button">Search</button>
+                        </form>
+                    </div>
+                    <div class="blog-main__content">
+                        <div class="blog-main__content-row">
+                            <div class="blog-main__previews">
+                                <h4 class="blog-main__previews-title blog-main__box-title text--uppercase">LATEST UPDATE</h4>
+                                <ul class="blog-main__previews-list">
+                                    <li class="blog-main__preview preview">
+                                        <a class="preview__link" href="#">
+                                            <div class="preview__image-block">
+                                                <img class="preview__image" src="./assets/img/christina-wocintechchat-com-UTw3j_aoIKM-unsplash.png" alt="christina-wocintechchat">
+                                            </div>
+                                            <div class="preview__text">
+                                                <div class="preview__meta item__meta">
+                                                    <span class="preview__tag item__tag">Trend and Insight</span>
+                                                    <span class="preview__date item__date">June 11</span>
+                                                </div>
+                                                <h3 class="preview__title item__title item__title--second">Cloud Platforms: One Solution for a Post Covid-19 World</h3>
+                                                <p class="preview__desc item__desc">
+                                                    The world has changed, what about you? Get on the cloud to accelerate business transformation in these troubling times.  No one ever saw it coming.  Now, after 6 months and…
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="blog-main__preview preview">
+                                        <a class="preview__link" href="#">
+                                            <div class="preview__image-block">
+                                                <img class="preview__image" src="./assets/img/luca-bravo-XJXWbfSo2f0-unsplash.png" alt="luca-bravo">
+                                            </div>
+                                            <div class="preview__text">
+                                                <div class="preview__meta item__meta">
+                                                    <span class="preview__tag item__tag">Digital future</span>
+                                                    <span class="preview__date item__date">June 8</span>
+                                                </div>
+                                                <h3 class="preview__title item__title item__title--second">5 Technology Trends That Can Transform Your Accounting Firm</h3>
+                                                <p class="preview__desc item__desc">
+                                                    Focus on being productive, not busy. Stimulate rapid growth and greater value for your practice through the smart utilisation of technology. Technology trends have revolutionised the way business is conducted,…
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                    <li class="blog-main__preview preview">
+                                        <a class="preview__link" href="#">
+                                            <div class="preview__image-block">
+                                                <img class="preview__image" src="./assets/img/carlos-muza-hpjSkU2UYSU-unsplash.png" alt="carlos-muza">
+                                            </div>
+                                            <div class="preview__text">
+                                                <div class="preview__meta item__meta">
+                                                    <span class="preview__tag item__tag">Trend and Insight</span>
+                                                    <span class="preview__date item__date">June 4</span>
+                                                </div>
+                                                <h3 class="preview__title item__title item__title--second">5 Platforms that Will Help You Thrive in a Disrupted World</h3>
+                                                <p class="preview__desc item__desc">
+                                                    Tech platforms and tools to help you run your accounting and corporate secretarial business efficiently Time and tech wait for no man. Technology has been moving so quickly that the…
+                                                </p>
+                                            </div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="blog-main__sidebar">
+                                <div class="blog-main__categories">
+                                    <h4 class="blog-main__categories-title blog-main__box-title text--uppercase">CATEGORIES</h4>
+                                    <ul class="blog-main__category-list category-list">
+                                        <li class="blog-main__category category">All</li>
+                                        <li class="blog-main__category category">Trends and Insight</li>
+                                        <li class="blog-main__category category">Latest</li>
+                                        <li class="blog-main__category category">Digital future</li>
+                                        <li class="blog-main__category category">Others</li>
+                                    </ul>
+                                </div>
+                                <div class="blog-main__sidebar-previews">
+                                    <h4 class="blog-main__sidebar-previews-title blog-main__box-title text--uppercase">SEE OTHER</h4>
+                                    <ul class="blog-main__sidebar-preview-list sidebar-preview-list">
+                                        <li class="blog-main__sidebar-preview sidebar-preview">
+                                            <a class="sidebar-preview__link" href="#">
+                                                <div class="sidebar-preview__meta item__meta">
+                                                    <span class="sidebar-preview__tag item__tag">Digital future</span>
+                                                    <span class="sidebar-preview__date item__date">June 1</span>
+                                                </div>
+                                                <h3 class="sidebar-preview__title item__title item__title--second">Time to Go Tech</h3>
+                                                <p class="sidebar-preview__desc item__desc">
+                                                    This is an account told through the perspective of a business owner who has dealt with inefficiency and wants to go from being mediocre to future-proof. He adopted a combination…
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li class="blog-main__sidebar-preview sidebar-preview">
+                                            <a class="sidebar-preview__link" href="#">
+                                                <div class="sidebar-preview__meta item__meta">
+                                                    <span class="sidebar-preview__tag item__tag">Digital future</span>
+                                                    <span class="sidebar-preview__date item__date">June 1</span>
+                                                </div>
+                                                <h3 class="sidebar-preview__title item__title item__title--second">What does a Future-ready accounting firm look like?</h3>
+                                                <p class="sidebar-preview__desc item__desc">
+                                                    To everyone who runs an accounting firm out there, it’s true that the industry suffers from an image problem. However, the good news is that we live in unprecedented times.…
+                                                </p>
+                                            </a>
+                                        </li>
+                                        <li class="blog-main__sidebar-preview sidebar-preview">
+                                            <a class="sidebar-preview__link" href="#">
+                                                <div class="sidebar-preview__meta item__meta">
+                                                    <span class="sidebar-preview__tag item__tag">Digital future</span>
+                                                    <span class="sidebar-preview__date item__date">June 1</span>
+                                                </div>
+                                                <h3 class="sidebar-preview__title item__title item__title--second">The role of automation in a Smart Nation</h3>
+                                                <p class="sidebar-preview__desc item__desc">
+                                                    Automation - a word we’ve been hearing a lot lately. But what does it really mean for business owners such as yourself? We walk through some examples within the context…
+                                                </p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="blog-main__content-btn btn btn-link btn--outline btn--outline-blue" type="button">Load more</button>
+                    </div>
+                </div>
+            </main>
+            @@include('./demo-form-block.html')
+        </div>
+        @@include('./footer.html')
+    </div>
 </body>
 </html>

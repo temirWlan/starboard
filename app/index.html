@@ -1,72 +1,39 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="./assets/css/main.min.css">
-    <script defer src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
-	<script defer src="./assets/js/script.js"></script>
-    <title>Starboard</title>
-</head>
+<html lang="en-EN ru-RU">
+@@include('./head.html')
 <body>
-    <div class="wrapper">
-        <main class="main">
+    <div class="wrapper page home-page">
+        <main class="home-main">
             <div class="container">
-                <div class="main__body">
-                    <header class="main__header header">
-                        <a class="header__logo" href="#">
-                            <img src="./assets//img/logo-white.svg" alt="logo">
-                        </a>
-                        <nav class="header__navbar navbar">
-                            <ul class="navbar__list">
-                                <li class="navbar__list-item">
-                                    <a href="#">Features</a>
-                                </li>
-                                <li class="navbar__list-item">
-                                    <a href="#">Blog</a>
-                                </li>
-                                <li class="navbar__list-item">
-                                    <a href="#">Contact Us</a>
-                                </li>
-                                <li class="navbar__list-item">
-                                    <a href="#">Sign in</a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <button class="header__btn btn btn--outline btn--outline-white" type="button">Get a demo</button>
-                    </header>
-                    <div class="main__content">
-                        <div class="main__column">
-                            <div class="main__text">
-                                <h1 class="main__title">
+                @@include('./header.html', { logoColor: 'white', btnColor: 'white' })
+                <div class="home-main__body">
+                    <div class="home-main__content">
+                        <div class="home-main__column">
+                            <div class="home-main__text">
+                                <h1 class="home-main__title">
                                     Reimagine the Modern<br/>
                                     Corporate Services<br/>
                                     Practice<br/>
                                 </h1>
-                                <p class="main__subtitle">
+                                <p class="home-main__subtitle">
                                     Everything you need for corporate governance entity management <br />
                                     and stakeholder engagement
                                 </p>
                             </div>
-                            <form class="main__form demo-form" method="GET" action="#">
-                                <input class="main__form-input demo-form__input input" type="email" name="email" placeholder="Enter your work email…">
-                                <button class="main__form-btn demo-form__btn btn btn--yellow" type="submit">Get a demo</button>
+                            <form class="home-main__form demo-form" method="GET" action="#">
+                                <input class="home-main__form-input demo-form__input input" type="email" name="email" placeholder="Enter your work email…">
+                                <button class="home-main__form-btn demo-form__btn btn btn--yellow" type="submit">Get a demo</button>
                             </form>
-                            <p class="main__desc subtitle---third">
+                            <p class="home-main__desc subtitle---third">
                                 Need to start urgently? Get on our Priority List
                             </p>
                         </div>
-                        <div class="main__column main__images">
-                            <div class="main__image-block">
-                                <span class="main__image-block-circles circles"></span>
+                        <div class="home-main__column main__images">
+                            <div class="home-main__image-block">
+                                <span class="home-main__image-block-circles circles"></span>
                                 <img src="./assets/img/client-management-dashboard.svg" alt="Client Management Dashboard">
                             </div>
-                            <div class="main__image-block">
+                            <div class="home-main__image-block">
                                 <img src="./assets/img/Document Management and Generation.svg" alt="Document Management and Generation">
                             </div>
                         </div>
@@ -81,7 +48,7 @@
                         How do you halve your effort<br/>
                         and 10x your results?
                     </h2>
-                    <p class="effort__subtitle subtitle--first">
+                    <p class="effort__subtitle subtitle--second">
                         All the tools you need, to manage and grow your client portfolio.
                     </p>
                     <ul class="effort__list">
@@ -134,7 +101,7 @@
                             Simplify Entity Management<br/>
                             & Corporate Governance
                         </h2>
-                        <p class="corporate-governance__subtitle subtitle--first">
+                        <p class="corporate-governance__subtitle subtitle--second">
                             Everything You Need to Run a Modern Corporate Secretarial Practice.
                         </p>
                     </div>
@@ -142,12 +109,12 @@
                         <div class="corporate-governance__list-item">
                             <div class="corporate-governance__list-item-content">
                                 <img class="corporate-governance__list-item-icon" src="./assets/img/pc.svg" alt="pc">
-                                <span class="corporate-governance__list-item-caption text--uppercase">KNOW EVERYTHING, IMMEDIATELY</span>
-                                <h4 class="corporate-governance__list-item-title">
+                                <span class="corporate-governance__list-item-caption item__caption">KNOW EVERYTHING, IMMEDIATELY</span>
+                                <h4 class="corporate-governance__list-item-title item__title item__title--second">
                                     Client Management<br/>
                                     Dashboard
                                 </h4>
-                                <p class="corporate-governance__list-item-desc">
+                                <p class="corporate-governance__list-item-desc item__desc">
                                     Full-visibility and total control of your<br/>
                                     entire client portfolio — combined with key<br/>
                                     metrics and insights including client risk<br/>
@@ -162,12 +129,12 @@
                         <div class="corporate-governance__list-item">
                             <div class="corporate-governance__list-item-content">
                                 <img class="corporate-governance__list-item-icon" src="./assets/img/workflow-magic.svg" alt="workflow-magic">
-                                <span class="corporate-governance__list-item-caption text--uppercase">KNOW EVERYTHING, IMMEDIATELY</span>
-                                <h4 class="corporate-governance__list-item-title">
+                                <span class="corporate-governance__list-item-caption item__caption">KNOW EVERYTHING, IMMEDIATELY</span>
+                                <h4 class="corporate-governance__list-item-title item__title item__title--second">
                                     Integrated Messaging, Jobs,<br/>
                                     Documents & Client Portal
                                 </h4>
-                                <p class="corporate-governance__list-item-desc">
+                                <p class="corporate-governance__list-item-desc item__desc">
                                     All client communications and related jobs in<br/>
                                     one place. Easily convert messages to tasks,<br/>
                                     and onboard new project members.
@@ -181,9 +148,9 @@
                         <div class="corporate-governance__list-item">
                             <div class="corporate-governance__list-item-content">
                                 <img class="corporate-governance__list-item-icon" src="./assets/img/workflow-magic.svg" alt="workflow-magic">
-                                <span class="corporate-governance__list-item-caption text--uppercase">SCALE WITH EASE</span>
-                                <h4 class="corporate-governance__list-item-title">Smart Automation Tools</h4>
-                                <p class="corporate-governance__list-item-desc">
+                                <span class="corporate-governance__list-item-caption item__caption">SCALE WITH EASE</span>
+                                <h4 class="corporate-governance__list-item-title item__title item__title--second">Smart Automation Tools</h4>
+                                <p class="corporate-governance__list-item-desc item__desc">
                                     Reduce all routine tasks and client<br/>
                                     communication to a single click. And<br/>
                                     with document-generation tools<br/>
@@ -217,7 +184,7 @@
                                 Trusted by <br/>
                                 the fastest-growing firms
                             </h2>
-                            <p class="testimonials__subtitle subtitle--first">
+                            <p class="testimonials__subtitle subtitle--second">
                                 Teams of every size have made Starboard <br>
                                 the place to manage a growing portfolio of client <br>
                                 entities.
@@ -311,12 +278,12 @@
                                     <img class="articles__list-item-image" src="./assets/img/christina-wocintechchat-com-UTw3j_aoIKM-unsplash.png" alt="christina-wocintechchat">
                                 </div>
                                 <div class="articles__list-item-text">
-                                    <div class="articles__list-item-meta">
-                                        <span class="articles__list-item-tag">Trend and Insight</span>
-                                        <span class="articles__list-item-date">June 11</span>
+                                    <div class="articles__list-item-meta item__meta">
+                                        <span class="articles__list-item-tag item__tag">Trend and Insight</span>
+                                        <span class="articles__list-item-date item__date">June 11</span>
                                     </div>
                                     <h5 class="articles__list-item-title">Cloud Platforms: One Solution for a Post Covid-19 World</h5>
-                                    <p class="articles__list-item-desc">
+                                    <p class="articles__list-item-desc item__desc">
                                         The world has changed, what about you? Get on the cloud to accelerate business transformation in these troubling times.  No one ever saw it coming.  Now, after 6 months and…
                                     </p>
                                 </div>
@@ -328,12 +295,12 @@
                                     <img class="articles__list-item-image" src="./assets/img/luca-bravo-XJXWbfSo2f0-unsplash.png" alt="luca-bravo">
                                 </div>
                                 <div class="articles__list-item-text">
-                                    <div class="articles__list-item-meta">
-                                        <span class="articles__list-item-tag">Digital Future</span>
-                                        <span class="articles__list-item-date">June 8</span>
+                                    <div class="articles__list-item-meta item__meta">
+                                        <span class="articles__list-item-tag item__tag">Digital Future</span>
+                                        <span class="articles__list-item-date item__date">June 8</span>
                                     </div>
                                     <h5 class="articles__list-item-title">5 Technology Trends That Can Transform Your Accounting Firm</h5>
-                                    <p class="articles__list-item-desc">
+                                    <p class="articles__list-item-desc item__desc">
                                         Focus on being productive, not busy. Stimulate rapid growth and greater value for your practice through the smart utilisation of technology. Technology trends 
                                     </p>
                                 </div>
@@ -345,12 +312,12 @@
                                     <img class="articles__list-item-image" src="./assets/img/carlos-muza-hpjSkU2UYSU-unsplash.png" alt="carlos-muza">
                                 </div>
                                 <div class="articles__list-item-text">
-                                    <div class="articles__list-item-meta">
-                                        <span class="articles__list-item-tag">Trend and Insight</span>
-                                        <span class="articles__list-item-date">June 4</span>
+                                    <div class="articles__list-item-meta item__meta">
+                                        <span class="articles__list-item-tag item__tag">Trend and Insight</span>
+                                        <span class="articles__list-item-date item__date">June 4</span>
                                     </div>
                                     <h5 class="articles__list-item-title">5 Platforms that Will Help You Thrive in a Disrupted World</h5>
-                                    <p class="articles__list-item-desc">
+                                    <p class="articles__list-item-desc item__desc">
                                         Tech platforms and tools to help you run your accounting and corporate secretarial business efficiently Time and tech wait for no man.  Technology has been moving so quickly that the…
                                     </p>
                                 </div>
@@ -362,12 +329,12 @@
                                     <img class="articles__list-item-image" src="./assets/img/luca-bravo-XJXWbfSo2f0-unsplash.png" alt="luca-bravo">
                                 </div>
                                 <div class="articles__list-item-text">
-                                    <div class="articles__list-item-meta">
-                                        <span class="articles__list-item-tag">Digital Future</span>
-                                        <span class="articles__list-item-date">June 8</span>
+                                    <div class="articles__list-item-meta item__meta">
+                                        <span class="articles__list-item-tag item__tag">Digital Future</span>
+                                        <span class="articles__list-item-date item__date">June 8</span>
                                     </div>
                                     <h5 class="articles__list-item-title">5 Technology Trends That Can Transform Your Accounting Firm</h5>
-                                    <p class="articles__list-item-desc">
+                                    <p class="articles__list-item-desc item__desc">
                                         Focus on being productive, not busy. Stimulate rapid growth and greater value for your practice through the smart utilisation of technology. Technology trends 
                                     </p>
                                 </div>
@@ -379,12 +346,12 @@
                                     <img class="articles__list-item-image" src="./assets/img/christina-wocintechchat-com-UTw3j_aoIKM-unsplash.png" alt="christina-wocintechchat">
                                 </div>
                                 <div class="articles__list-item-text">
-                                    <div class="articles__list-item-meta">
-                                        <span class="articles__list-item-tag">Trend and Insight</span>
-                                        <span class="articles__list-item-date">June 11</span>
+                                    <div class="articles__list-item-meta item__meta">
+                                        <span class="articles__list-item-tag item__tag">Trend and Insight</span>
+                                        <span class="articles__list-item-date item__date">June 11</span>
                                     </div>
                                     <h5 class="articles__list-item-title">Cloud Platforms: One Solution for a Post Covid-19 World</h5>
-                                    <p class="articles__list-item-desc">
+                                    <p class="articles__list-item-desc item__desc">
                                         The world has changed, what about you? Get on the cloud to accelerate business transformation in these troubling times.  No one ever saw it coming.  Now, after 6 months and…
                                     </p>
                                 </div>
@@ -396,123 +363,9 @@
             </div>
         </section>
         <div class="container">
-            <div class="home-demo-form-block demo-form-block">
-                <div class="demo-form-block__content">
-                    <h3 class="demo-form-block__title">Get your team started on Starboard today</h3>
-                    <span class="demo-form-block__subtitle">It’s easy when we’re with you at every step.</span>
-                    <form class="demo-form-block__form demo-form" action="#">
-                        <input class="demo-form-block__input demo-form__input input" type="text" placeholder="Enter your email…">
-                        <button class="demo-form-block__btn demo-form__btn btn btn--yellow" type="submit">Get a demo</button>
-                    </form>
-                    <span class="demo-form-block__desc">Guided Onboarding. Try It Free for 30 Days. Cancel Anytime.</span>
-                </div>
-            </div>
+            @@include('./demo-form-block.html')
         </div>
-        <footer class="footer">
-            <div class="footer__content">
-                <div class="footer__top">
-                    <div class="container">
-                        <div class="footer__top-content">
-                            <div>
-                                <h3 class="footer__title">Starboard</h3>
-                                <span class="footer__subtitle">
-                                    The Smarter Way to Manage <br />
-                                    & Grow Your Corporate Services Firm
-                                </span>
-                                <div class="footer__contacts">
-                                    <a class="footer__phone-number" href="tel:+6596969768">
-                                        <img src="./assets/img/phone.svg" alt="phone">
-                                        +65 9696 9768
-                                    </a>
-                                    <a class="footer__email" href="mailto:hello@starboardhq.com">
-                                        <img src="./assets/img/email.svg" alt="email">
-                                        hello@starboardhq.com
-                                    </a>
-                                </div>
-                            </div>
-                            <nav class="footer__navbar">
-                                <div class="footer__navbar-column">
-                                    <span class="footer__navbar-title text--uppercase">PRODUCT</span>
-                                    <ul class="footer__navbar-list">
-                                        <li class="footer__navbar-list-item">
-                                            <a class="footer__navbar-list-item-link" href="#">Features</a>
-                                        </li>
-                                        <li class="footer__navbar-list-item">
-                                            <a class="footer__navbar-list-item-link" href="#">Security</a>
-                                        </li>
-                                        <li class="footer__navbar-list-item">
-                                            <a class="footer__navbar-list-item-link" href="#">Benefits</a>
-                                        </li>
-                                        <li class="footer__navbar-list-item">
-                                            <a class="footer__navbar-list-item-link" href="#">Customer Stories</a>
-                                        </li>
-                                        <li class="footer__navbar-list-item">
-                                            <a class="footer__navbar-list-item-link" href="#">Pricing</a>
-                                        </li>
-                                        <li class="footer__navbar-list-item">
-                                            <a class="footer__navbar-list-item-link" href="#">Demo</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="footer__navbar-column">
-                                    <span class="footer__navbar-title text--uppercase">RESOURCE</span>
-                                    <ul class="footer__navbar-list">
-                                        <li class="footer__navbar-list-item">
-                                            <a class="footer__navbar-list-item-link" href="#">User Guides</a>
-                                        </li>
-                                        <li class="footer__navbar-list-item">
-                                            <a class="footer__navbar-list-item-link" href="#">Blog</a>
-                                        </li>
-                                        <li class="footer__navbar-list-item">
-                                            <a class="footer__navbar-list-item-link" href="#">FAQ</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="footer__navbar-column">
-                                    <span class="footer__navbar-title text--uppercase">COMPANY</span>
-                                    <ul class="footer__navbar-list">
-                                        <li class="footer__navbar-list-item">
-                                            <a class="footer__navbar-list-item-link" href="#">About Us</a>
-                                        </li>
-                                        <li class="footer__navbar-list-item">
-                                            <a class="footer__navbar-list-item-link" href="#">News</a>
-                                        </li>
-                                        <li class="footer__navbar-list-item">
-                                            <a class="footer__navbar-list-item-link" href="#">Media Kit</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                                <div class="footer__navbar-column">
-                                    <span class="footer__navbar-title text--uppercase">FOLLOWING</span>
-                                    <ul class="footer__navbar-list">
-                                        <li class="footer__navbar-list-item">
-                                            <a class="footer__navbar-list-item-link" href="#">LinkedIn</a>
-                                        </li>
-                                        <li class="footer__navbar-list-item">
-                                            <a class="footer__navbar-list-item-link" href="#">Facebook</a>
-                                        </li>
-                                        <li class="footer__navbar-list-item">
-                                            <a class="footer__navbar-list-item-link" href="#">Customer Support</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </nav>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer__bottom">
-                    <div class="container">
-                        <div class="footer__bottom-content">
-                            <span>© 2021 . Starboard Pte Ltd</span>
-                            <div>
-                                <a href="#">Term of use</a>
-                                <a href="#">Policy</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </footer>
+        @@include('./footer.html', { class: 'page-footer' })
     </div>
 </body>
 </html>

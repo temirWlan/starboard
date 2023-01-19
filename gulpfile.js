@@ -1,6 +1,7 @@
 const gulp = require("gulp");
 const webpack = require("webpack-stream");
 const browsersync = require("browser-sync");
+const fileinclude = require('gulp-file-include');
 const htmlmin = require("gulp-htmlmin");
 const autoprefixer = require("gulp-autoprefixer");
 const concat = require("gulp-concat");
@@ -17,6 +18,7 @@ const dest = "./build";
 const path = {
 	src: {
 		html: `${src}/*.html`,
+		php: `${src}/*.php`,
 		img: `${src}/assets/img/**/*.*`,
 		fonts: `${src}/assets/fonts/**/*.*`,
 		styles: `${src}/assets/scss/style.scss`,
@@ -24,6 +26,7 @@ const path = {
 	},
 	build: {
 		html: `${dest}`,
+		php: `${dest}`,
 		img: `${dest}/assets/img`,
 		fonts: `${dest}/assets/fonts`,
 		css: `${dest}/assets/css`,
@@ -31,6 +34,7 @@ const path = {
 	},
 	watch: {
 		html: `${src}/*.html`,
+		php: `${src}/*.php`,
 		img: `${src}/assets/img/**/*.*`,
 		fonts: `${src}/assets/fonts/**/*.*`,
 		styles: `${src}/assets/scss/**/*.scss`,
@@ -45,10 +49,20 @@ function clean() {
 
 function copyHtml() {
 	return gulp.src(path.src.html)
-					.pipe(htmlmin({ collapseWhitespace: true }))
+				.pipe(fileinclude({
+					prefix: '@@',
+					basepath: '@file'
+				}))
+				.pipe(htmlmin({ collapseWhitespace: true }))
                .pipe(gulp.dest(path.build.html))
                .pipe(browsersync.stream());
 }
+
+// function copyPhp() {
+// 	return gulp.src(path.src.php)
+//                .pipe(gulp.dest(path.build.php))
+//                .on("end", browsersync.reload);
+// }
 
 function copyImg() {
 	return gulp.src(path.src.img)

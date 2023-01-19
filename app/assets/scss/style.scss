@@ -16,18 +16,59 @@ button {
     cursor: pointer;
 }
 
+textarea {
+    resize: none;
+}
+
 ::placeholder {
     color: rgba(54, 54, 54, 0.6);
 }
 
 .wrapper {
     height: 100%;
+}
+
+.page {
     & header {
         padding-top: 29px;
     }
 }
 
-.main {
+.home-page {
+    & .navbar__list-item {
+        &:hover {
+            & a {
+                color: rgba(255, 255, 255, 1);
+            }
+        }
+        & a {
+            color: rgba(255, 255, 255, 0.8);
+        }
+    }
+    & .demo-form-block {
+        margin-top: 148px;
+    }
+}
+
+.features-page {
+    & .demo-form-block {
+        margin-top: 160px;
+    }
+}
+
+.blog-page {
+    & .demo-form-block {
+        margin-top: 107px;
+    }
+}
+
+.contact-us-page {
+    & .footer {
+        margin-top: 120px;
+    }
+}
+
+.home-main {
     min-height: 100vh;
     background-color: #fff;
     position: relative;
@@ -198,16 +239,12 @@ button {
                 width: 58px;
             }
             &-caption {
-                @include font-props(18px, 150%, rgba(54, 54, 54, 0.6));
                 margin-top: 25px;
             }
             &-title {
-                @include poppins-semibold;
-                @include font-props(22px, 150%, $blackSecond);
                 margin-top: 10px;
             }
             &-desc {
-                @include font-props(16px, 162.5%, rgba(54, 54, 54, 0.6));
                 margin-top: 12px;
             }
             &-images {
@@ -371,6 +408,10 @@ button {
         &-item {
             margin: 50px 25px 0;
             flex: 0 0 356px;
+            transition: all 0.4s ease 0s;
+            &:hover {
+                transform: translateY(-15px);
+            }
             &-link {
                 display: flex;
                 flex-direction: column;
@@ -391,29 +432,6 @@ button {
             }
             &-text {
                 margin-top: 20px;
-            }
-            &-meta {
-                @include font-props(12px, 150%, #000);
-                display: flex;
-                align-items: center;
-                font-size: 12px;
-            }
-            &-tag {
-                @include flex;
-                color: #000;
-                &::after {
-                    @include pseudo;
-                    transform: translateX(10px);
-                    width: 3px;
-                    height: 3px;
-                    border-radius: 50%;
-                    background-color: $blackSecond;
-                    opacity: 0.6;
-                }
-            }
-            &-date {
-                margin-left: 20px;
-                color: #8a8888;
             }
             &-title {
                 @include font-props(18px, 150%, $blackSecond);
@@ -437,3 +455,277 @@ button {
     margin: 148px 0 129px;
 }
 
+.features-main {
+    margin-top: 167px;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__text {
+        text-align: center;
+    }
+    &__subtitle {
+        margin-top: 17px;
+        color: $blackSecond;
+    }
+    &__list {
+        margin-top: 126px;
+        width: 100%;
+        &-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            &:not(:first-child) {
+                margin-top: 210px;
+            }
+            &-row {
+                @include flex;
+            }
+            &-content {
+                display: flex;
+                flex-direction: column;
+            }
+            &-icon {
+                width: 69px;
+                object-fit: cover;
+            }
+            &-text {
+                margin-top: 34px;
+            }
+            &-title {
+                margin-top: 16px;
+            }
+            &-desc {
+                margin-top: 18px;
+            }
+            &-image {
+                width: 789px;
+                height: 444px;
+                object-fit: cover;
+            }
+            &-grid {
+                margin-top: -27px;
+            }
+        }
+    }
+    &__grid {
+        @include flex($align: flex-start, $wrap: wrap);
+        max-width: 992px;
+        position: relative;
+        // TO DO
+        // &::before,
+        // &::after {
+        //     @include pseudo;
+        //     position: absolute;
+        //     background-color: #979797;
+        //     opacity: 0.2;
+        // }
+        // &::before {
+        //     width: 93.5%;
+        //     height: 1px;
+        // }
+        // &::after {
+        //     width: 1px;
+        //     height: 93.5%;
+        //     transform: rotate(90deg);
+        // }
+        &-item {
+            margin-top: 127px;
+            flex: 0 0 43%;
+            &-icon {
+                width: 57px;
+                object-fit: cover;
+            }
+            &-title {
+                margin-top: 24px;
+            }
+            &-desc {
+                margin-top: 17px;
+            }
+        }
+    }
+}
+
+.blog-main {
+    margin-top: 161px;
+    &__body {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__box {
+        max-width: 727px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__title {
+        font-size: 32px;
+    }
+    &__search-form {
+        @include flex;
+        margin-top: 43px;
+        width: 100%;
+        height: 61px;
+        &-input {
+            flex: 0 0 75%;
+            height: 100%;
+        }
+        &-btn {
+            flex: 0 0 158px;
+            height: 100%;
+        }
+    }
+    &__content {
+        margin-top: 118px;
+        display: flex;
+        flex-direction: column;
+        &-row {
+            @include flex($align: flex-start);
+            max-width: 1134px;
+        }
+        &-btn {
+            margin-top: 124px;
+            width: 178px;
+            height: 50px;
+            padding: 13px 43px;
+            align-self: center;
+        }
+    }
+    &__box-title {
+        @include poppins-semibold;
+        @include font-props(18px, 150%, $blackSecond);
+        margin-bottom: 25px;
+    }
+    &__previews {
+        flex: 0 0 59.5%;
+        display: flex;
+        flex-direction: column;
+        &-list {
+            width: 100%;
+            list-style-type: none;
+        }
+    }
+    &__preview {
+        &:not(:first-child) {
+            margin-top: 76px;
+        }
+    }
+    &__sidebar {
+        flex: 0 0 30%;
+        &-previews {
+            margin-top: 74px;
+        }
+        &-preview {
+            &:not(:first-child) {
+                margin-top: 64px;
+                &::before {
+                    @include pseudo;
+                    transform: translateY(-28px);
+                    width: 100%;
+                    height: 1px;
+                    background-color: rgba(0, 0, 0, 0.2);
+                }
+            }
+        }
+    }
+    &__category-list {
+        margin: -16px 0 0 -16px;
+    }
+    &__category {
+        margin: 16px 0 0 16px;
+    }
+}
+
+.contact-us-main {
+    margin-top: 163px;
+    &__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    &__text {
+        max-width: 750px;
+        text-align: center;
+    }
+    &__subtitle {
+        width: 100%;
+        margin-top: 16px;
+        // letter-spacing: 0.7px;
+    }
+    &__form {
+        margin-top: 52px;
+        max-width: 684px;
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &-field {
+            margin-top: 22px;
+            &.input {
+                flex: 0 0 100%;
+            }
+            &[name="name"],
+            &[name="email"] {
+                flex: 0 0 49%;
+            }
+        }
+        &-input {
+            height: 60px;
+        }
+        &-textarea {
+            height: 180px;
+        }
+        &-btn {
+            margin: 24px auto 0;
+            width: 192px;
+            height: 53px;
+        }
+    }
+    // TO DO
+    &__images {
+        width: 100%;
+    }
+    &__image-block {
+        width: 114px;
+        height: 114px;
+        display: flex;
+        justify-content: center;
+        border-radius: 50%;
+        background-color: rgba(225, 225, 225, 0.2);
+    }
+    &__image {
+        width: 82px;
+        height: 82px;
+        border-radius: 50%;
+        object-fit: cover;
+        transform: translateY(-7px);
+    }
+    &__contacts {
+        @include font-props(26px, 150%, $blackSecond);
+        @include poppins-semibold;
+        @include flex;
+        margin-top: 152px;
+        & a {
+            @include poppins-medium;
+            color: #3670ff;
+            text-decoration: none;
+            transition: all 0.2s ease-in-out 0s;
+            &:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+    &__phone-number {
+        margin-right: 42px;
+    }
+    &__email {
+        margin-left: 42px;
+    }
+}
+
+.sign-up-main,
+.sign-in-main,
+.recover-main {
+    margin-top: 100px;
+}
