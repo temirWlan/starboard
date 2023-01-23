@@ -938,6 +938,25 @@
 }
 
 @media (max-width: 600px) {
+    .get-demo-modal {
+        &__dialog {
+            width: 90%;
+            height: 220px;
+        }
+        &__content {
+            width: 80%;
+        }
+        &__form {
+            flex-direction: column;
+            align-items: center;
+            & input {
+                width: 100%;
+            }
+            & button {
+                margin-top: 10px;
+            }
+        }
+    }
     .footer {
         &__top {
             padding: 30px 0;
