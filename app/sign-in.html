@@ -4,7 +4,7 @@
 <body>
     <div class="wrapper page sign-in-page">
         <div class="container">
-            @@include('./header.html', { logoColor: 'blue', btnColor: 'blue' })
+            @@include('./header.html', { logoColor: 'blue', btnColor: 'blue', burgerColor: "black" })
             <main class="sign-in-main">
                 <div class="sign-in-main__content column">
                     <h2 class="sign-in-main__title title--first">Sign in</h2>
@@ -22,6 +22,7 @@
                 </div>
             </main>
         </div>
+        @@include('./get-demo-modal.html')
         @@include('./footer.html')
     </div>
 </body>

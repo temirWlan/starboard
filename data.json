@@ -1,0 +1,64 @@
+{
+    "articles": [
+        {
+            "title": "Cloud Platforms: One Solution for a Post Covid-19 World",
+            "desc": "The world has changed, what about you? Get on the cloud to accelerate business transformation in these troubling times.  No one ever saw it coming.  Now, after 6 months and…",
+            "imgSrc": "./assets/img/christina-wocintechchat-com-UTw3j_aoIKM-unsplash.png",
+            "altImg": "christina-wocintechchat",
+            "meta": {
+                "tag": "Trend and Insight",
+                "date": "June 11"
+            }
+        },
+        {
+            "title": "5 Platforms that Will Help You Thrive in a Disrupted World",
+            "desc": "Tech platforms and tools to help you run your accounting and corporate secretarial business efficiently Time and tech wait for no man.  Technology has been moving so quickly that the…",
+            "imgSrc": "./assets/img/carlos-muza-hpjSkU2UYSU-unsplash.png",
+            "altImg": "carlos-muza",
+            "meta": {
+                "tag": "Trend and Insight",
+                "date": "June 4"
+            }
+        },
+        {
+            "title": "5 Technology Trends That Can Transform Your Accounting Firm",
+            "desc": "Focus on being productive, not busy. Stimulate rapid growth and greater value for your practice through the smart utilisation of technology. Technology trends have revolutionised the way business is conducted,…",
+            "imgSrc": "./assets/img/luca-bravo-XJXWbfSo2f0-unsplash.png",
+            "altImg": "luca-bravo",
+            "meta": {
+                "tag": "Digital future",
+                "date": "June 8"
+            }
+        },
+        {
+            "title": "Time to Go Tech",
+            "desc": "This is an account told through the perspective of a business owner who has dealt with inefficiency and wants to go from being mediocre to future-proof. He adopted a combination…",
+            "imgSrc": "./assets/img/christina-wocintechchat-com-UTw3j_aoIKM-unsplash.png",
+            "altImg": "christina-wocintechchat",
+            "meta": {
+                "tag": "Digital future",
+                "date": "June 1"
+            }
+        },
+        {
+            "title": "What does a Future-ready accounting firm look like?",
+            "desc": "To everyone who runs an accounting firm out there, it’s true that the industry suffers from an image problem. However, the good news is that we live in unprecedented times.…",
+            "imgSrc": "./assets/img/carlos-muza-hpjSkU2UYSU-unsplash.png",
+            "altImg": "carlos-muza",
+            "meta": {
+                "tag": "Digital future",
+                "date": "June 1"
+            }
+        },
+        {
+            "title": "The role of automation in a Smart Nation",
+            "desc": "Automation - a word we’ve been hearing a lot lately. But what does it really mean for business owners such as yourself? We walk through some examples within the context…",
+            "imgSrc": "./assets/img/luca-bravo-XJXWbfSo2f0-unsplash.png",
+            "altImg": "luca-bravo",
+            "meta": {
+                "tag": "Digital future",
+                "date": "June 1"
+            }
+        }
+    ]
+}

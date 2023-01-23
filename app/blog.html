@@ -4,11 +4,11 @@
 <body>
     <div class="wrapper page blog-page">
         <div class="container">
-            @@include('./header.html', { logoColor: 'blue', btnColor: 'blue' })
+            @@include('./header.html', { logoColor: 'blue', btnColor: 'blue', burgerColor: "black" })
             <main class="blog-main">
                 <div class="blog-main__body">
                     <div class="blog-main__box">
-                        <h2 class="blog-main__title title--first">
+                        <h2 class="blog-main__title title--second">
                             We asked ourselves: What is the Future of <br />
                             Corporate Services & Entity Management?
                         </h2>
@@ -22,14 +22,14 @@
                             <div class="blog-main__previews">
                                 <h4 class="blog-main__previews-title blog-main__box-title text--uppercase">LATEST UPDATE</h4>
                                 <ul class="blog-main__previews-list">
-                                    <li class="blog-main__preview preview">
+                                    <li class="blog-main__preview preview" data-category="Trends and Insight">
                                         <a class="preview__link" href="#">
                                             <div class="preview__image-block">
                                                 <img class="preview__image" src="./assets/img/christina-wocintechchat-com-UTw3j_aoIKM-unsplash.png" alt="christina-wocintechchat">
                                             </div>
                                             <div class="preview__text">
                                                 <div class="preview__meta item__meta">
-                                                    <span class="preview__tag item__tag">Trend and Insight</span>
+                                                    <span class="preview__tag item__tag">Trends and Insight</span>
                                                     <span class="preview__date item__date">June 11</span>
                                                 </div>
                                                 <h3 class="preview__title item__title item__title--second">Cloud Platforms: One Solution for a Post Covid-19 World</h3>
@@ -39,7 +39,7 @@
                                             </div>
                                         </a>
                                     </li>
-                                    <li class="blog-main__preview preview">
+                                    <li class="blog-main__preview preview" data-category="Digital future">
                                         <a class="preview__link" href="#">
                                             <div class="preview__image-block">
                                                 <img class="preview__image" src="./assets/img/luca-bravo-XJXWbfSo2f0-unsplash.png" alt="luca-bravo">
@@ -56,14 +56,14 @@
                                             </div>
                                         </a>
                                     </li>
-                                    <li class="blog-main__preview preview">
+                                    <li class="blog-main__preview preview" data-category="Trends and Insight">
                                         <a class="preview__link" href="#">
                                             <div class="preview__image-block">
                                                 <img class="preview__image" src="./assets/img/carlos-muza-hpjSkU2UYSU-unsplash.png" alt="carlos-muza">
                                             </div>
                                             <div class="preview__text">
                                                 <div class="preview__meta item__meta">
-                                                    <span class="preview__tag item__tag">Trend and Insight</span>
+                                                    <span class="preview__tag item__tag">Trends and Insight</span>
                                                     <span class="preview__date item__date">June 4</span>
                                                 </div>
                                                 <h3 class="preview__title item__title item__title--second">5 Platforms that Will Help You Thrive in a Disrupted World</h3>
@@ -79,11 +79,11 @@
                                 <div class="blog-main__categories">
                                     <h4 class="blog-main__categories-title blog-main__box-title text--uppercase">CATEGORIES</h4>
                                     <ul class="blog-main__category-list category-list">
-                                        <li class="blog-main__category category">All</li>
-                                        <li class="blog-main__category category">Trends and Insight</li>
-                                        <li class="blog-main__category category">Latest</li>
-                                        <li class="blog-main__category category">Digital future</li>
-                                        <li class="blog-main__category category">Others</li>
+                                        <li class="blog-main__category category" data-category="All">All</li>
+                                        <li class="blog-main__category category" data-category="Trends and Insight">Trends and Insight</li>
+                                        <li class="blog-main__category category" data-category="Latest">Latest</li>
+                                        <li class="blog-main__category category" data-category="Digital future">Digital future</li>
+                                        <li class="blog-main__category category" data-category="Others">Others</li>
                                     </ul>
                                 </div>
                                 <div class="blog-main__sidebar-previews">
@@ -136,6 +136,7 @@
             @@include('./demo-form-block.html')
         </div>
         @@include('./footer.html')
+        @@include('./get-demo-modal.html')
     </div>
 </body>
 </html>

@@ -4,7 +4,7 @@
 <body>
     <div class="wrapper page contact-us-page">
         <div class="container">
-            @@include('./header.html', { logoColor: 'blue', btnColor: 'blue' })
+            @@include('./header.html', { logoColor: 'blue', btnColor: 'blue', burgerColor: "black" })
             <main class="contact-us-main">
                 <div class="contact-us-main__content">
                     <div class="contact-us-main__text">
@@ -13,7 +13,7 @@
                             Have a question or just want to say hi? We’d love to hear from you
                         </p>
                     </div>
-                    <form class="contact-us-main__form" action="#" method="POST">
+                    <form class="contact-us-main__form contact-us-form" action="#" method="POST">
                         <input class="contact-us-main__form-input contact-us-main__form-field input input--outlined input--outlined-gray" type="text" name="name" placeholder="Your Full Name" required>
                         <input class="contact-us-main__form-input contact-us-main__form-field input input--outlined input--outlined-gray" type="text" name="email" placeholder="Email Address" required>
                         <input class="contact-us-main__form-input contact-us-main__form-field input input--outlined input--outlined-gray" type="text" name="subject" placeholder="Subject" required>
@@ -42,7 +42,7 @@
                         <a class="contact-us-main__phone-number" href="tel:+6596969768">
                             +65 9696 9768
                         </a>
-                        or
+                        &nbsp;or&nbsp;
                         <a class="contact-us-main__email" href="mailto:hello@starboardhq.com">
                             hello@starboardhq.com
                         </a>
@@ -51,6 +51,7 @@
             </main>
         </div>
         @@include('./footer.html')
+        @@include('./get-demo-modal.html')
     </div>
 </body>
 </html>
