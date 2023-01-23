@@ -697,13 +697,11 @@ textarea {
 .sign-in-main,
 .recover-main {
     margin-top: 100px;
+    & form {
+        width: 100%;
+    }
 }
 
-.sign-up-main__form,
-.sign-in-main__form,
-.recover-main__form {
-    width: 100%;
-}
 
 // media queries
 @media (max-width: 1366px) {

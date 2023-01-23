@@ -336,7 +336,7 @@ template {
 /* pseudo */
 /* color */
 /* transition */
-.d-flex .column {
+.column {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2651,10 +2651,9 @@ textarea {
 .recover-main {
   margin-top: 100px;
 }
-
-.sign-up-main__form,
-.sign-in-main__form,
-.recover-main__form {
+.sign-up-main form,
+.sign-in-main form,
+.recover-main form {
   width: 100%;
 }
 
