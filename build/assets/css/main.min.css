@@ -336,12 +336,7 @@ template {
 /* pseudo */
 /* color */
 /* transition */
-.d-flex .container {
-  width: 81.25%;
-  margin: 0 auto;
-}
-
-.column {
+.d-flex .column {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -457,6 +452,11 @@ template {
   -webkit-transform: translateX(21px);
   -ms-transform: translateX(21px);
   transform: translateX(21px);
+}
+
+.container {
+  width: 81.25%;
+  margin: 0 auto;
 }
 
 .text--black {

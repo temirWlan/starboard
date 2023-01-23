@@ -4,12 +4,6 @@
 
 .d-flex
 
-.container {
-    // max-width: 1170px;
-    width: 81.25%;
-    margin: 0 auto;
-}
-
 .column {
     display: flex;
     flex-direction: column;
@@ -83,6 +77,11 @@
     &::after {
         transform: translateX(21px);
     }
+}
+
+.container {
+    width: 81.25%;
+    margin: 0 auto;
 }
 
 .text {
