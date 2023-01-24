@@ -1,5 +1,5 @@
 const config = {
-    SERVER_URL: "http://localhost:8080"
+    SERVER_URL: "https://starboard-server.onrender.com"
 };
 
 export default config;
